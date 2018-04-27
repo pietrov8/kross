@@ -1,0 +1,100 @@
+.home-boxs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  clear: both;
+  @include breakpoint(tablet) {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 20px;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 10px;
+  }
+  &__item {
+    background-size: cover;
+    background-position: center;
+    width: 49%;
+    min-height: 188px;
+    position: relative;
+    margin-bottom: 22px;
+    @include breakpoint(tablet) {
+      width: 100%;
+      display: block;
+      min-height: 161px;
+    }
+    &:hover {
+      .home-boxs__text {
+        padding-right: 50px;
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top:0;
+    bottom: 0;
+    font-size: 24px;
+    line-height: 26px;
+    color: #FFF;
+    font-weight: 500;
+    padding: 10px 28px;
+    align-items: center;
+    transition: all 0.3s;
+    @include breakpoint(tablet) {
+      font-size: 20px;
+      padding: 10px 20px;
+    }
+  }
+}
+
+.home-blog {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+
+  &__col1 {
+    width: 270/1100*100%;
+    @include breakpoint(tablet) {
+      width: 41%;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+  &__col2 {
+    width: 415/1100*100%;
+    @include breakpoint(tablet) {
+      width: 56%;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+  &__col3 {
+    width: 330/1100*100%;
+    text-align: center;
+    @include breakpoint(tablet) {
+      width: 100%;
+      padding-top: 37px;
+    }
+    img,iframe {
+      display: inline-block;
+      max-width: 100%;
+    }
+  }
+  .section-title {
+    h2 {
+      @include breakpoint(tablet) {
+        margin: 13px 0 38px 0;
+      }
+      @include breakpoint(mobile) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

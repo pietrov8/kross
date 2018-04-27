@@ -1,0 +1,338 @@
+.header {
+  .menu-toggle {
+    @include breakpoint(tablet) {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      right: 16px;
+      top: 51px;
+      span {
+        position: absolute;
+        background: $blue;
+        width: 26px;
+        height: 4px;
+        left: 7px;
+        &:nth-child(1) {
+          top:9px;
+        }
+        &:nth-child(2) {
+          top:18px;
+        }
+        &:nth-child(3) {
+          top:27px;
+        }
+      }
+    }
+    @include breakpoint(mobile) {
+      right: auto;
+      left: 10px;
+      top:10px;
+    }
+  }
+  .logo {
+    float: left;
+    margin: 25px 0 0 -41px;
+    @include breakpoint(tablet) {
+      margin: 39px 0 0 -15px;
+    }
+    @include breakpoint(mobile) {
+      margin: 49px 0 0 -15px;
+    }
+    img {
+      @include breakpoint(tablet) {
+        width: 248px;
+      }
+      @include breakpoint(mobile) {
+        width: 294px;
+      }
+    }
+  }
+  &__right {
+    float: right;
+    @include breakpoint(tablet) {
+      width: calc(100% - 250px);
+    }
+    @include breakpoint(mobile) {
+      position: absolute;
+      right: 20px;
+      top: 6px;
+      width: 72%;
+    }
+  }
+  &__top {
+    text-align: right;
+    color: $blue;
+    font-weight: bold;
+    margin: 27px 12px 0 0;
+    @include breakpoint(tablet) {
+      margin: 11px -2px 0 0;
+      font-size: 14px;
+    }
+    a {
+      margin: 0 0 0 13px;
+      color: $blue;
+      text-decoration: none;
+      font-size: 22px;
+      &:hover {
+        color: #FFF !important;
+      }
+    }
+  }
+  &__search {
+    position: relative;
+    @include breakpoint(tablet) {
+      margin-right: 40px;
+    }
+    @include breakpoint(mobile) {
+      //display: none;
+    }
+    &:after {
+      background: $blue;
+      width: 1px;
+      height: 52px;
+      position: absolute;
+      left: -32px;
+      top: 10px;
+      content: "";
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+    input[type="submit"] {
+      background: url("../images/search.png");
+      background-size: 100% 100%;
+      width: 83px;
+      height: 83px;
+      background-position: center;
+      border: none;
+      text-align: center;
+      color: $blue;
+      font-size: 20px;
+      font-weight: 300;
+      display: inline-block;
+      vertical-align: top;
+      text-transform: lowercase;
+      margin: -19px 11px 0 0;
+      padding-top: 56px;
+      @include breakpoint(tablet) {
+        float: right;
+        margin: 0;
+        width: 55px;
+        height: 55px;
+        font-size: 12px;
+        padding-top: 36px;
+      }
+      @include breakpoint(mobile) {
+        position: absolute;
+        right: 95px !important;
+        top: -48px !important;
+      }
+      &:hover {
+        background-image: url("../images/search-white.png");
+        color: #FFF;
+      }
+    }
+    input[type="text"] {
+      background: none;
+      border: 1px solid $blue;
+      color: $blue;
+      margin: 30px 12px 0 0;
+      padding: 0 10px;
+      width: 275px;
+      height: 30px;
+      display: inline-block;
+      vertical-align: top;
+      @include breakpoint(tablet) {
+        position: absolute;
+        margin: 0 0 0 0;
+        right: 55px;
+        top: 18px;
+        background: rgba(0,0,0,0.85);
+        display: none;
+      }
+    }
+  }
+}
+
+div.asl_w {
+  display: inline-block;
+  vertical-align: top;
+  width: 275px !important;
+  margin: 19px 0 0 0 !important;
+  background: none !important;
+  border: 1px solid $blue !important;
+  color: $blue !important;
+  box-shadow: none !important;
+  @include breakpoint(tablet) {
+    position: absolute !important;
+    margin: 0 0 0 0 !important;
+    right: 55px !important;
+    top: 18px !important;
+    background: rgba(0,0,0,0.85) !important;
+    opacity:0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s !important;
+    &.open {
+      opacity:1 !important;
+      visibility: visible !important;
+    }
+  }
+  @include breakpoint(mobile) {
+    right: auto !important;
+    left: 50% !important;
+    top: 14px !important;
+    transform: translateX(-52%);
+  }
+  .probox {
+    background: none !important;
+    .promagnifier {
+      display: none !important;
+    }
+    input {
+      color: #FFF !important;
+    }
+  }
+}
+.header__search {
+  #ajaxsearchlite1 .probox .proinput input, div.asl_w .probox .proinput input {
+    color: #FFF !important;
+  }
+}
+div.asl_r.vertical {
+  margin: 0 !important;
+  top: 103px !important;
+  width: 275px !important;
+  padding: 0 !important;
+  background: rgba(0,0,0,0.85) !important;
+  @include breakpoint(tablet) {
+    top: 86px !important
+  }
+}
+div.asl_r .results .asl_nores {
+  background: none !important;
+  color: #FFF !important;
+}
+div.asl_r .results .item {
+  background: none !important;
+  border: none !important;
+}
+div.asl_r.vertical .results .asl_spacer {
+  background-color: $blue !important;
+  &:last-child {
+    display: none;
+  }
+}
+div.asl_r .results .item .asl_content h3, div.asl_r .results .item .asl_content h3 a {
+  color: #FFF !important;
+  font-size: 12px !important;
+}
+div.asl_r .results .item .asl_content {
+  padding: 3px 12px !important;
+}
+
+.nav {
+  clear: both;
+  padding-bottom: 48px;
+  @include breakpoint(tabletup) {
+    display: block !important;
+  }
+  @include breakpoint(tablet) {
+    padding-bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 105px;
+    z-index: 100;
+    display: none;
+    background: rgba(0,0,0,0.85);
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(tablet) {
+      display: block;
+      margin: 15px 0;
+    }
+    li {
+      @include breakpoint(tablet) {
+        text-align: center;
+        padding: 5px 0;
+      }
+      position: relative;
+      &:after {
+        position: absolute;
+        right: -69px;
+        top:0;
+        background: $blue;
+        height: 35px;
+        content: "";
+        width: 1px;
+        @include breakpoint(tablet) {
+          display: none;
+        }
+      }
+      a {
+        color: #FFF;
+        text-transform: uppercase;
+        font-size: 28px;
+        text-decoration: none;
+        font-weight: 300;
+        @include breakpoint(tablet) {
+          font-size: 22px;
+        }
+      }
+      &.menu-current-item,
+      &:hover {
+        a {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+.body-orange {
+  .header {
+    .menu-toggle {
+      span {
+        background: $orange;
+      }
+    }
+    &__top {
+      color: $orange;
+      a {
+        color: $orange;
+      }
+    }
+    &__search {
+      &:after {
+        background: $orange;
+      }
+      input[type="submit"] {
+        color: $orange;
+        background-image: url("../images/search-orange.png");
+      }
+      input[type="text"] {
+        border-color: $orange;
+      }
+    }
+  }
+  .nav {
+    ul {
+      li {
+        &:after {
+          background: $orange;
+        }
+        &.menu-current-item,
+        &:hover {
+          a {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+}

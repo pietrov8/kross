@@ -1,0 +1,28 @@
+//----------------------------------*\
+// SETTINGS
+//----------------------------------*/
+@charset "UTF-8";
+
+//----------------------------------*\
+// COMPONENTS
+//----------------------------------*/
+
+
+//@import "../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css";
+@import "../fonts/templates_icon_css.css";
+@import "modules/base/base";
+
+@import "modules/components/header";
+@import "modules/components/article-thumb";
+@import "modules/components/footer";
+@import "modules/components/pagination";
+@import "modules/layout/content";
+
+@import "modules/themes/home";
+@import "modules/themes/blog";
+@import "modules/themes/video";
+@import "modules/themes/faq";
+@import "modules/themes/search-list";
+@import "modules/themes/map";
+@import "modules/themes/shimano";
+@import "modules/themes/questionnaire";

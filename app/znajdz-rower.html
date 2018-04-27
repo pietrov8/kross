@@ -1,0 +1,186 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</head>
+<body style="background-image: url('images/bg-home.png')">
+
+<div class="container">
+    <div class="header">
+        <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+        <a href="#" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="header__right">
+            <div class="header__top">Włącz rower <a href="#"><i class="fa fa-facebook-f"></i></a> <a href="#"><i class="fa fa-youtube"></i></a></div>
+            <div class="header__search">
+                <form>
+                    <input type="submit" value="Szukaj">
+                    <input type="text" placeholder="">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Wideo</a></li>
+            <li><a href="#">Dream E-bike</a></li>
+            <li class="menu-current-item"><a href="#">Znajdź E-bike</a></li>
+            <li><a href="#">Faq</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="content__title">
+            <div class="section-title">
+                <h2>Znajdź E-bike</h2>
+            </div>
+        </div>
+        <div class="search-map">
+            <div class="search-map__top map-legend">
+                <h2>Wyszukaj adres</h2>
+                <div class="input">
+                    <input type="text" placeholder="Twój adres" id="search-box" value="Kraków">
+                    <a href="#" class="reset-map"></a>
+                </div>
+                <div class="checkbox">
+                    <div class="checkbox__input">
+                        <input type="checkbox" name="radio1" id="radio1" data-filter="sklep" checked>
+                        <label for="radio1"></label>
+                    </div>
+                    <label class="checkbox__label" for="radio1">Sklep</label>
+                </div>
+                <div class="checkbox">
+                    <div class="checkbox__input">
+                        <input type="checkbox" name="radio1" id="radio2" data-filter="serwis" checked>
+                        <label for="radio2"></label>
+                    </div>
+                    <label class="checkbox__label" for="radio2">Punkty serwisowe</label>
+                </div>
+            </div>
+            <div class="search-map__map">
+
+                <div class="gmap" data-lat="52.197157" data-lon="21.046794" data-lat-center="52.068812"  data-lon-center="19.479745" data-zoom="6" data-markers=''></div>
+
+            </div>
+            <div class="search-map__bottom">
+                <h3>Sklepy w Twojej okolicy</h3>
+                <div class="legend">
+                    <span>Legenda</span>
+                    <div class="legend__item"><img src="images/marker-green.png"> <span>Sklep i serwis</span></div>
+                    <div class="legend__item"><img src="images/marker-orange.png"> <span>Sklep</span></div>
+                    <div class="legend__item"><img src="images/marker-blue.png"> <span>Serwis</span></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="newsletter">
+        <div class="section-title">
+            <h2>Newsletter</h2>
+        </div>
+        <div class="newsletter__left">
+            <h3>Bądź na bieżąco z nowinkami ze świata E-bików!</h3>
+        </div>
+        <div class="newsletter__right">
+            <label>Podaj email:</label>
+            <input type="email">
+            <input type="submit" class="button" value="Zapisz">
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer__list">
+            <h2>O serwisie</h2>
+            <ul>
+                <li><a href="#">O serwisie</a></li>
+                <li><a href="#">Polityka prywatności</a></li>
+                <li><a href="#">Polityka cookies</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </div>
+        <div class="footer__list">
+            <h2>Kategorie</h2>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Wideo</a></li>
+                <li><a href="#">Dream E-bike</a></li>
+                <li><a href="#">Znajdź E-bike</a></li>
+                <li><a href="#">Faq</a></li>
+                <li><a href="#">Shimano Steps</a></li>
+            </ul>
+        </div>
+        <div class="footer__copy">
+            <p>Copyright Kross 2018. All rights reserved.</p><p>Witryna www.kross.pl wykorzystuje pliki cookies w celu poprawnej realizacji dostarczanych usług oraz w celach statystycznych.</p>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+
+
+<script>
+
+    window.places_map = {
+        "markers": [
+            {
+                "id": 1,
+                "markerIcon": "images/marker-blue.png",
+                "lat": "51.246454",
+                "lon": "22.568446",
+                "title" : "Lublin serwis",
+                "type": "serwis"
+            },
+            {
+                "id": 2,
+                "markerIcon": "images/marker-green.png",
+                "lat": "52.200976",
+                "lon": "21.044870",
+                "title" : "Warszawa sklep",
+                "type": "all"
+            },
+            {
+                "id": 3,
+                "markerIcon": "images/marker-orange.png",
+                "lat": "54.352025",
+                "lon": "18.646638",
+                "title" : "Gdańsk sklep",
+                "type": "sklep"
+            }
+
+        ]
+    }
+
+
+
+</script>
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyCfITmYECh5ZLez6emqP0P5qjxRjniDH6s&amp;libraries=places"></script>
+<script src="js/vendor/snazzy-info-window.min.js"></script>
+</body>
+</html>

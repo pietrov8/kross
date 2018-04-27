@@ -1,0 +1,30 @@
+.pagination {
+  border-top: 1px solid #005594;
+  padding: 46px 0;
+  margin: 42px 0 0 0;
+  span,a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    @include breakpoint(mobile) {
+      margin-right: 10px;
+    }
+  }
+  .fa-angle-left {
+    margin-right: 12px;
+  }
+  .fa-angle-right {
+    margin-left: 12px;
+  }
+  .current {
+    font-weight: bold;
+  }
+  .next,
+  .prev {
+    &:hover {
+      color: $blue;
+    }
+  }
+}

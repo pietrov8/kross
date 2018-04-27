@@ -1,0 +1,70 @@
+.faq {
+  &__inner {
+    overflow: hidden;
+    padding-bottom: 30px;
+  }
+  &__title {
+    h3 {
+      font-size: 40px;
+      font-weight: normal;
+      margin: 0 0 -9px 0;
+      @include breakpoint(tablet) {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+  &__list {
+    float: right;
+    width: 100%;
+    max-width: 765px;
+    margin-right: 8px;
+    @include breakpoint(tablet) {
+      margin-right: 0;
+    }
+  }
+  &__toggle {
+    border: 1px solid $blue;
+    padding: 0 70px;
+    margin-bottom: 6px;
+    @include breakpoint(tablet) {
+      padding: 0 50px;
+    }
+    @include breakpoint(mobileonly) {
+      padding: 0 15px;
+    }
+    &__btn {
+      span {
+        display: block;
+        cursor: pointer;
+        padding: 11px 70px;
+        margin: 0 -70px;
+        position: relative;
+        @include breakpoint(tablet) {
+          padding: 11px 50px;
+          margin: 0 -50px;
+        }
+        @include breakpoint(mobileonly) {
+          margin: 0 -15px;
+        }
+        &:after {
+          position: absolute;
+          left: 22px;
+          top: 5px;
+          font-size: 28px;
+          font-family: "FontAwesome";
+          content: "\f105";
+          color: $blue;
+          transition: all 0.3s;
+        }
+        &.current {
+          &:after {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+    &__content {
+      display: none;
+    }
+  }
+}

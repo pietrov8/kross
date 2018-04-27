@@ -1,0 +1,242 @@
+.reccomended {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 68px;
+  @include breakpoint(tablet) {
+    padding-bottom: 45px;
+  }
+  .section-title {
+    h2 {
+      margin: 5px 0 7px 0;
+    }
+  }
+  &__col {
+    padding-right: 30px;
+    @include breakpoint(tablet) {
+      padding-right: 0;
+    }
+    h2 {
+      font-weight: normal;
+      margin: 17px 0 16px 0;
+      font-size: 27px;
+      @include breakpoint(tablet) {
+        font-size: 22px;
+        margin-top: 25px;
+      }
+    }
+    img {
+      margin: 2px 0 18px 0;
+    }
+    ul {
+      margin: 0 0 21px 0;
+      padding: 0;
+      list-style: none;
+      li {
+        a {
+          color: #FFF;
+          text-decoration: none;
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 24px;
+          @include breakpoint(tablet) {
+            font-size: 16px;
+            line-height: 20px;
+          }
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.newsletter {
+  background: url("../images/newsletter-bg.png") center top no-repeat;
+  margin: 40px -35px 0 -35px;
+  padding: 0 35px 38px 35px;
+  overflow: hidden;
+  clear: both;
+  @include breakpoint(tablet) {
+    padding: 0 35px 11px 35px;
+    background-position: center top -26px;
+  }
+  .section-title {
+    h2 {
+      color: #FFF;
+      margin: 33px 0 40px 0;
+      @include breakpoint(tablet) {
+        margin: 6px 0 9px 0;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &__left {
+    width: 630/1100*100%;
+    float: left;
+    @include breakpoint(tablet) {
+      width: 52%;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+    h3 {
+      font-size: 31px;
+      margin: 0 0 0 0;
+      font-weight: normal;
+      @include breakpoint(tablet) {
+        font-size: 20px;
+        line-height: 22px;
+      }
+    }
+  }
+  &__right {
+    float: right;
+    width: 425/1100*100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @include breakpoint(tablet) {
+      width: 42%;
+      margin-top: 19px;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+    .input-helper {
+      width: 100%;
+      .wpcf7-not-valid-tip {
+        color: red;
+        font-size: 12px;
+      }
+    }
+    input:not([type="submit"]) {
+      width: 100%;
+      border: 1px solid #FFF;
+      background: none;
+      height: 32px;
+      @include breakpoint(tablet) {
+        height: 20px;
+      }
+    }
+    input[type="submit"] {
+      position: absolute;
+      right: 0;
+      top:0;
+      background: #FFF;
+      height: 31px;
+      border-color: #FFF;
+      @include breakpoint(tablet) {
+        height: 20px;
+        font-size: 10px;
+      }
+      &:hover {
+        background: $blue;
+        color: #FFF;
+      }
+    }
+    label {
+      white-space: nowrap;
+      font-size: 25px;
+      font-weight: 300;
+      color: #FFF;
+      margin-right: 28px;
+      @include breakpoint(tablet) {
+        font-size: 12px;
+        margin-right: 17px;
+      }
+    }
+  }
+}
+
+.body-orange {
+  .newsletter {
+    background-image: url("../images/newsletter-bg-orange.png");
+  }
+}
+
+.footer {
+  padding: 93px 0 0 0;
+  @include breakpoint(tablet) {
+    padding-top: 53px;
+  }
+  &__list {
+    display: flex;
+    padding: 0 0 42px 0;
+    text-transform: uppercase;
+    @include breakpoint(tablet) {
+      display: inline-block;
+      vertical-align: top;
+      width: 49%;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+    h2 {
+      color: #FFF;
+      font-weight: 300;
+      margin: 0 58px 0 0;
+      font-size: 20px;
+      letter-spacing: 6px;
+    }
+    ul {
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+      list-style: none;
+      li {
+        display: inline-block;
+        font-size: 18px;
+        margin: 0 45px 0 0;
+        @include breakpoint(tablet) {
+          display: block;
+          line-height: 24px;
+        }
+        a {
+          color: $blue;
+          text-decoration: none;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &__copy {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 39px 0;
+    @include breakpoint(tablet) {
+      display: block;
+    }
+    p {
+      margin: 0 0 0 0;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: -0.2px;
+      color: $blue;
+    }
+  }
+}
+
+.body-orange {
+  .footer {
+    &__list {
+      ul {
+        li {
+          a {
+            color: $orange;
+          }
+        }
+      }
+    }
+    &__copy {
+      p {
+        color: $orange;
+      }
+
+    }
+  }
+}

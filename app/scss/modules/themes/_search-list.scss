@@ -1,0 +1,27 @@
+.search-list {
+  padding-bottom: 50px;
+  &__title {
+    h3 {
+      margin: 0 0 40px 0;
+      font-weight: 300;
+      font-size: 28px;
+    }
+  }
+  .article-thumb-small {
+    &__img {
+      width: 25%;
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
+    }
+    &__text {
+      width: 70%;
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
+      p {
+        margin: 16px 0 20px 0;
+      }
+    }
+  }
+}
