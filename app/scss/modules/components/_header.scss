@@ -98,6 +98,7 @@
         display: none;
       }
     }
+    .button-search,
     input[type="submit"] {
       background: url("../images/search.png");
       background-size: 100% 100%;
@@ -127,10 +128,10 @@
         right: 95px !important;
         top: -48px !important;
       }
-      &:hover {
-        background-image: url("../images/search-white.png");
-        color: #FFF;
-      }
+      //&:hover {
+      //  background-image: url("../images/search-white.png");
+      //  color: #FFF;
+      //}
     }
     input[type="text"] {
       background: none;
@@ -178,10 +179,9 @@ div.asl_w {
     }
   }
   @include breakpoint(mobile) {
-    right: auto !important;
-    left: 50% !important;
+    right: -42px !important;
+    left: auto !important;
     top: 14px !important;
-    transform: translateX(-52%);
   }
   .probox {
     background: none !important;

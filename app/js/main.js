@@ -25,7 +25,7 @@ $(function () {
         e.preventDefault();
     });
 
-    $(document).on("click", ".header__search input:submit", function (e) {
+    $(document).on("click", ".header__search input:submit, .button-search", function (e) {
         $("div.asl_w").toggleClass("open")
     })
 
@@ -261,6 +261,7 @@ function initMap() {
                 // Uzupełnianie mapy markerami
                 var markers = window.places_map.markers;
                 var markers_table = [];
+                // var infowindow = null;
                 $.each(markers, function(i, item) {
                     var position = new google.maps.LatLng(item.lat, item.lon);
                     var markerOptions = {
@@ -278,7 +279,7 @@ function initMap() {
                     var gmarker = new google.maps.Marker(markerOptions);
                     var contentString = item.title;
 
-                    infowindow = new SnazzyInfoWindow({
+                    var infowindow = new SnazzyInfoWindow({
                         marker: gmarker,
                         content: contentString,
                         closeWhenOthersOpen: true,
@@ -292,11 +293,15 @@ function initMap() {
                     google.maps.event.addListener(gmarker, "click", function() {
                         this.setOptions({zIndex:30});
                     });
+
+                    $("[data-filter]").on("change", function () {
+                        infowindow.close()
+                    })
+
                 });
 
                 // Filtrowanie markerów
                 function filter_markers() {
-                    $(".si-float-wrapper").hide();
                     $("[data-filter]").each(function () {
 
                         var category = $(this).attr("data-filter");
@@ -353,18 +358,10 @@ function initMap() {
                         console.log("Returned place contains no geometry");
                         return;
                     }
-                    var icon = {
-                        url: place.icon,
-                        size: new google.maps.Size(71, 71),
-                        origin: new google.maps.Point(0, 0),
-                        anchor: new google.maps.Point(17, 34),
-                        scaledSize: new google.maps.Size(25, 25)
-                    };
 
                     // Create a marker for each place.
                     markers.push(new google.maps.Marker({
                         map: map,
-                        icon: icon,
                         title: place.name,
                         position: place.geometry.location
                     }));
