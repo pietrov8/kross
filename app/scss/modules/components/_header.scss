@@ -98,6 +98,7 @@
         display: none;
       }
     }
+    .button-search,
     input[type="submit"] {
       background: url("../images/search.png");
       background-size: 100% 100%;
@@ -127,10 +128,10 @@
         right: 95px !important;
         top: -48px !important;
       }
-      &:hover {
-        background-image: url("../images/search-white.png");
-        color: #FFF;
-      }
+      //&:hover {
+      //  background-image: url("../images/search-white.png");
+      //  color: #FFF;
+      //}
     }
     input[type="text"] {
       background: none;
@@ -177,8 +178,13 @@ div.asl_w {
       visibility: visible !important;
     }
   }
+<<<<<<< HEAD
   @media all and (max-width: 605px){
     right: -20px !important;
+=======
+  @include breakpoint(mobile) {
+    right: -42px !important;
+>>>>>>> 2f85c620a80cee69f95b2c199cfa4cd35a239c5a
     left: auto !important;
     top: 14px !important;
   }
