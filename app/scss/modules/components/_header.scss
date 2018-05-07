@@ -177,11 +177,10 @@ div.asl_w {
       visibility: visible !important;
     }
   }
-  @include breakpoint(mobile) {
-    right: auto !important;
-    left: 50% !important;
+  @media all and (max-width: 605px){
+    right: -20px !important;
+    left: auto !important;
     top: 14px !important;
-    transform: translateX(-52%);
   }
   .probox {
     background: none !important;
@@ -205,7 +204,12 @@ div.asl_r.vertical {
   padding: 0 !important;
   background: rgba(0,0,0,0.85) !important;
   @include breakpoint(tablet) {
-    top: 86px !important
+    top: 92px !important
+  }
+  @media all and (max-width: 605px){
+    right: 40px !important;
+    left: auto !important;
+    top: 88px !important;
   }
 }
 div.asl_r .results .asl_nores {
